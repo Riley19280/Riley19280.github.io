@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Unity WebGL Player | Vectricity</title>
-     <style type="text/css">
-
+    <style>
+    
     body {
     font-family: Helvetica, Verdana, Arial, sans-serif;
 	margin: 0px;
@@ -81,11 +81,11 @@ canvas {
 <script src="Release/fileloader.js"></script>
 <script>if (!(!Math.fround)) {
   var script = document.createElement('script');
-  script.src = "Release/Builds.js";
+  script.src = "Release/VECTRICITY_RC5_GL.js";
   document.body.appendChild(script);
 } else {
   var codeXHR = new XMLHttpRequest();
-  codeXHR.open('GET', 'Release/Builds.js', true);
+  codeXHR.open('GET', 'Release/VECTRICITY_RC5_GL.js', true);
   codeXHR.onload = function() {
     var code = codeXHR.responseText;
     if (!Math.fround) { 
