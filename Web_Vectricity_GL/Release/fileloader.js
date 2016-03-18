@@ -17,8 +17,8 @@ Module.expectedDataFileDownloads++;
     } else {
       throw 'using preloaded data can only be done on a web page or in a web worker';
     }
-    var PACKAGE_NAME = 'VECTRICITY_RC5_GL.data';
-    var REMOTE_PACKAGE_BASE = 'VECTRICITY_RC5_GL.data';
+    var PACKAGE_NAME = 'gl.data';
+    var REMOTE_PACKAGE_BASE = 'gl.data';
     if (typeof Module['locateFilePackage'] === 'function' && !Module['locateFile']) {
       Module['locateFile'] = Module['locateFilePackage'];
       Module.printErr('warning: you defined Module.locateFilePackage, that has been renamed to Module.locateFile (using your locateFilePackage for now)');
@@ -26,8 +26,8 @@ Module.expectedDataFileDownloads++;
     var REMOTE_PACKAGE_NAME = typeof Module['locateFile'] === 'function' ?
                               Module['locateFile'](REMOTE_PACKAGE_BASE) :
                               ((Module['filePackagePrefixURL'] || '') + REMOTE_PACKAGE_BASE);
-    var REMOTE_PACKAGE_SIZE = 29054873;
-    var PACKAGE_UUID = '614f2f75-2440-4cfa-a2ba-9995c506c33f';
+    var REMOTE_PACKAGE_SIZE = 27883997;
+    var PACKAGE_UUID = 'c3631bfb-eb4d-4c17-8794-7263fdb6f77c';
   
     function fetchRemotePackage(packageName, packageSize, callback, errback) {
       var xhr = new XMLHttpRequest();
@@ -127,15 +127,15 @@ Module['FS_createPath']('/', 'Resources', true, true);
         this.requests[this.name] = null;
       },
     };
-      new DataRequest(0, 62900, 0, 0).open('GET', '/mainData');
-    new DataRequest(62900, 62921, 0, 0).open('GET', '/methods_pointedto_by_uievents.xml');
-    new DataRequest(62921, 22886581, 0, 0).open('GET', '/resources.assets');
-    new DataRequest(22886581, 23178646, 0, 0).open('GET', '/resources.resource');
-    new DataRequest(23178646, 23197710, 0, 0).open('GET', '/sharedassets0.assets');
-    new DataRequest(23197710, 25123513, 0, 0).open('GET', '/sharedassets0.resource');
-    new DataRequest(25123513, 26977185, 0, 0).open('GET', '/Il2CppData/Metadata/global-metadata.dat');
-    new DataRequest(26977185, 28552221, 0, 0).open('GET', '/Resources/unity_default_resources');
-    new DataRequest(28552221, 29054873, 0, 0).open('GET', '/Resources/unity_builtin_extra');
+      new DataRequest(0, 63516, 0, 0).open('GET', '/mainData');
+    new DataRequest(63516, 63537, 0, 0).open('GET', '/methods_pointedto_by_uievents.xml');
+    new DataRequest(63537, 21724205, 0, 0).open('GET', '/resources.assets');
+    new DataRequest(21724205, 22016270, 0, 0).open('GET', '/resources.resource');
+    new DataRequest(22016270, 22033134, 0, 0).open('GET', '/sharedassets0.assets');
+    new DataRequest(22033134, 23958937, 0, 0).open('GET', '/sharedassets0.resource');
+    new DataRequest(23958937, 25806309, 0, 0).open('GET', '/Il2CppData/Metadata/global-metadata.dat');
+    new DataRequest(25806309, 27381345, 0, 0).open('GET', '/Resources/unity_default_resources');
+    new DataRequest(27381345, 27883997, 0, 0).open('GET', '/Resources/unity_builtin_extra');
 
     function processPackageData(arrayBuffer) {
       Module.finishedDataFileDownloads++;
@@ -154,10 +154,10 @@ Module['FS_createPath']('/', 'Resources', true, true);
           DataRequest.prototype.requests["/Il2CppData/Metadata/global-metadata.dat"].onload();
           DataRequest.prototype.requests["/Resources/unity_default_resources"].onload();
           DataRequest.prototype.requests["/Resources/unity_builtin_extra"].onload();
-          Module['removeRunDependency']('datafile_VECTRICITY_RC5_GL.data');
+          Module['removeRunDependency']('datafile_gl.data');
 
     };
-    Module['addRunDependency']('datafile_VECTRICITY_RC5_GL.data');
+    Module['addRunDependency']('datafile_gl.data');
   
     if (!Module.preloadResults) Module.preloadResults = {};
   
