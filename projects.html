@@ -54,12 +54,14 @@
                     <tr>
                         <td><a class="graphic" href="#ColoredPerspective"><img class="intable" src="images/projects/coloredperspectiveicon.png"></a><br><a href="#ColoredPerspective">Colored Perspective</a></td>
                         <td><a class="graphic" href="#StaticEvolution"><img class="intable" src="images/projects/staticevolutionicon.png"></a><br><a href="#StaticEvolution">Static Evolution</a></td>
-                        <td><a class="graphic" href="#WordLookup"><img class="intable" src="images/questionmark.png"></a><br><a href="#WordLookup">Word Lookup</a></td>
+                        <td><a class="graphic" href="#fractals"><img class="intable" src="images/projects/fractalicon.PNG"></a><br><a href="#fractals">Fractals</a></td>
                         <td><a class="graphic" href="#APUSHMaster"><img class="intable" src="images/projects/apushmastericon.png"></a><br><a href="#APUSHMaster">APUSH Master</a></td>
                     </tr>
                     <tr>
+                        <td><a class="graphic" href="#WordLookup"><img class="intable" src="images/questionmark.png"></a><br><a href="#WordLookup">Word Lookup</a></td>
                         <td><a class="graphic" href="#VocabMaster"><img class="intable" src="images/projects/vocabmastericon.png"></a><br><a href="#VocabMaster">Vocab Master</a></td>
                         <td><a class="graphic" href="#TimelineTool"><img class="intable" src="images/projects/timelinetoolicon.jpg"></a><br><a href="#TimelineTool">Timeline Tool</a></td>
+
                         <!--<td><a class="graphic" href="#ptemplate"><img class="intable" src="images/questionmark.png"></a><br><a href="#ptemplate">Template</a></td>-->
                         <!--<td><a class="graphic" href="#FBLARoadtoNLCFundraising"><canvas class="square" id="myCanvas" style="border:1px solid #000000; width: 100%; "></canvas></a><br></a><br><a href="#ptemplate">FBLA Road to NLC Fundraising</a></td>-->
                     </tr>
@@ -334,6 +336,33 @@
             </nav>
         </article>
 
+        <!-- fractal -->
+        <article id="fractals">
+            <h2 class="major">Fractals</h2>
+            <canvas class="image fit" id="fractalcanvas" style="border:1px solid #000000;"></canvas>
+
+            <label>Angle</label> <input type="number" id="fractalangle" oninput="fractalGUI()" value="45">
+            <label>Branch Factor</label> <input type="number" id="fractalbranchFactor" oninput="fractalGUI()" value=".66" step="0.01" min=".01" max=".85">
+            <label>Start Size</label> <input type="number" id="fractalstartsize" oninput="fractalGUI()" value="100" >
+            <p></p>
+            <input type="checkbox" name="fractalrandomang" class="field half first" onclick="fractalcheckboxGUI()" id="fractalrandomang"><label for="fractalrandomang">Random Angles?</label>
+
+
+            <form >
+                <div class="field half first">
+                    <label id="fractalrandomangminlabel" style="visibility:hidden">Min</label>
+                    <input type="number" id="fractalrandomangmin" value="10" oninput="fractalGUI()" style="visibility:hidden">
+                </div>
+                <div class="field half">
+                    <label id="fractalrandomangmaxlabel" style="visibility:hidden">Max</label>
+                    <input type="number" id="fractalrandomangmax" value="80" oninput="fractalGUI()" style="visibility:hidden">
+                </div>
+
+            </form>
+
+            <button  onclick="fractalGUI()">Start</button>
+        </article>
+
     </div>
 
     <!-- Footer -->
@@ -358,6 +387,7 @@
 <script src="assets/js/skel.min.js"></script>
 <script src="assets/js/util.js"></script>
 <script src="assets/js/main.js"></script>
+<script src="assets/js/fractaltree.js"></script>
 <script src="assets/js/tracking.js"></script>
 </body>
 </html>
